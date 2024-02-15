@@ -1,2 +1,2 @@
-# dotfiles
-A collection of dotfiles for softwares I use
+# DOTFILES
+A collection of dotfiles for softwares I use. Hope you find it useful
