@@ -1,5 +1,5 @@
 # dotfiles
-A collection of dotfiles for softwares I use this includes:
+A collection of dotfiles for softwares I use; these include:
 - dwm
 - st
 - rofi
@@ -12,3 +12,5 @@ A collection of dotfiles for softwares I use this includes:
 - dmenu
 - dunst
 - neofetch
+- tmux
+- libinput
