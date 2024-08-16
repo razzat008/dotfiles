@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="vim"
+PATH="$PATH":"$HOME/.local/bin/"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -110,3 +111,18 @@ alias lg="lazygit"
 alias aircon="bluetoothctl connect 25:A0:0B:9F:C0:13"
 alias aircond="bluetoothctl disconnect 25:A0:0B:9F:C0:13"
 alias checkint="ping archlinux.org -c3"
+alias nv='NVIM_APPNAME="nvchad" nvim'
+# ===========eza needed=============
+# alias ls='eza' # preferred listing
+# alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
+# alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+# alias lla='eza -la --color=always --group-directories-first --icons'  # long format
+# alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+# alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+
+#  binding ~/.local/bin/sessionizer-tmux to <C-p>
+bindkey -s ^p "sessionizer-tmux\n"
+
+
+# ===== zoxide needed ======
+# eval "$(zoxide init zsh --cmd cd)"
