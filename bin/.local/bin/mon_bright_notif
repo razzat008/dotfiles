@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function send_notification() {
+	brightness=$(ddcutil getvcp 10 --bus 0 --sleep-multiplier .2 | awk '{print substr($9, 1, length($9) -1)}') 
+	dunstify -a "changebrightness" -u low -h string:x-dunst-stack-tag:Brightness -h int:value:"$brightness" "Brightness ${brightness}%" -t 2000
+}
+
+case $1 in
+up)
+  ddcutil setvcp 10 + 5
+	send_notification $1
+	;;
+down)
+  ddcutil setvcp 10 - 5
+	send_notification $1
+	;;
+esac
+
