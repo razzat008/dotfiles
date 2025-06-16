@@ -4,7 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="vim"
-PATH="$PATH":"$HOME/.local/bin/":"$HOME/.local/opt/go/bin":"$HOME/.cargo/bin"
+export XDG_CONFIG_HOME="$HOME/.config"
+export BUN_INSTALL="$HOME/.bun"
+PATH="$PATH":"$HOME/.local/bin/":"$HOME/.local/opt/go/bin":"$HOME/go/bin":"$HOME/.cargo/bin":"$BUN_INSTALL/bin:$PATH"
 QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
 
 # Set name of the theme to load --- if set to "random", it will
@@ -112,7 +114,7 @@ alias lg="/usr/bin/lazygit"
 alias aircon="bluetoothctl connect 25:A0:0B:9F:C0:13"
 alias aircond="bluetoothctl disconnect 25:A0:0B:9F:C0:13"
 alias checkint="ping archlinux.org -c3"
-alias nv='NVIM_APPNAME="nvchad" nvim'
+alias nv='NVIM_APPNAME="nvmy" nvim'
 alias ff='fastfetch'
 # ===========eza needed=============
 alias ls='eza' # preferred listing
@@ -134,3 +136,13 @@ alias mondown='ddcutil setvcp 10 - 5 --bus 0'
 
 # ===== zoxide needed ======
 eval "$(zoxide init zsh --cmd cd)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# bun completions
+[ -s "/home/ceaser/.bun/_bun" ] && source "/home/ceaser/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
