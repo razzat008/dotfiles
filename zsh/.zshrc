@@ -130,6 +130,7 @@ bindkey -s ^n "attacher\n"
 
 
 alias kussh="ssh kuhpc"
+alias rpissh="ssh rpissh"
 alias mapper='setxkbmap -option caps:escape_shifted_capslock && xset r rate 300 40'
 alias monup='ddcutil setvcp 10 + 5 --bus 0'
 alias mondown='ddcutil setvcp 10 - 5 --bus 0'
