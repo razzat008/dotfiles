@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/projects ~/codes ~/gitbuilds ~/projects/webpages/ -mindepth 1 -maxdepth 1 -type d | fzf --layout=reverse)
+    selected=$(find ~/projects ~/codes ~/gitbuilds ~/dev/webpages/ -mindepth 1 -maxdepth 1 -type d | fzf --layout=reverse)
 fi
 
 if [[ -z $selected ]]; then
