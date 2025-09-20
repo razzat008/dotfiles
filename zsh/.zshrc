@@ -5,8 +5,14 @@
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="vim"
 export XDG_CONFIG_HOME="$HOME/.config"
+# bun paths
 export BUN_INSTALL="$HOME/.bun"
-PATH="$PATH":"$HOME/.local/bin/":"$HOME/.local/opt/go/bin":"$HOME/go/bin":"$HOME/.cargo/bin":"$BUN_INSTALL/bin:$PATH"
+
+# go paths
+export GOBIN="$HOME/.local/bin/go"
+
+# paths
+export PATH="$HOME/.local/bin:$HOME/.local/opt/go/bin:$GOBIN:$HOME/.cargo/bin:$BUN_INSTALL/bin:$PATH"
 QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
 
 # Set name of the theme to load --- if set to "random", it will
@@ -134,6 +140,7 @@ alias rpissh="ssh rpissh"
 alias mapper='setxkbmap -option caps:escape_shifted_capslock && xset r rate 300 40'
 alias monup='ddcutil setvcp 10 + 5 --bus 0'
 alias mondown='ddcutil setvcp 10 - 5 --bus 0'
+alias rm='bash /home/ceaser/gitbuilds/shell-safe-rm/bin/rm.sh'
 
 # ===== zoxide needed ======
 eval "$(zoxide init zsh --cmd cd)"
@@ -143,7 +150,3 @@ eval "$(zoxide init zsh --cmd cd)"
 
 # bun completions
 [ -s "/home/ceaser/.bun/_bun" ] && source "/home/ceaser/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
