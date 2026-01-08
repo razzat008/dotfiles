@@ -52,7 +52,7 @@ ZSH_THEME="alanpeabody"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -137,11 +137,16 @@ bindkey -s ^n "attacher\n"
 
 alias kussh="ssh kuhpc"
 alias rpissh="ssh rpissh"
+alias linuxssh="ssh linuxserver"
 alias mapper='setxkbmap -option caps:escape_shifted_capslock && xset r rate 300 40'
 alias monup='ddcutil setvcp 10 + 5 --bus 0'
 alias mondown='ddcutil setvcp 10 - 5 --bus 0'
 alias rm='bash /home/ceaser/gitbuilds/shell-safe-rm/bin/rm.sh'
-
+alias nvidia-firefox="
+__NV_PRIME_RENDER_OFFLOAD=1 \
+__GLX_VENDOR_LIBRARY_NAME=nvidia \
+firefox
+"
 # ===== zoxide needed ======
 eval "$(zoxide init zsh --cmd cd)"
 
@@ -150,3 +155,20 @@ eval "$(zoxide init zsh --cmd cd)"
 
 # bun completions
 [ -s "/home/ceaser/.bun/_bun" ] && source "/home/ceaser/.bun/_bun"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/ceaser/.opam/opam-init/init.zsh' ]] || source '/home/ceaser/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
+# pnpm
+export PNPM_HOME="/home/ceaser/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
