@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 systemctl --user import-environment DISPLAY
+# export XDG_SESSION_TYPE=x11
+# unset WAYLAND_DISPLAY
+# export QT_QPA_PLATFORM=xcb
 
 #for fonts/colors etc
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources

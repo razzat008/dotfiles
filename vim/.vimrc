@@ -41,4 +41,4 @@ noremap <leader>tn :tabNext <CR>
 noremap <leader>tx :close <CR>
 noremap <leader>x :close <CR>
 
-"colorscheme desert
+" colorscheme desert

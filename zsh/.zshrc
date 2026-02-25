@@ -115,12 +115,12 @@ alias n="nvim"
 alias v="vim"
 alias pacup="sudo pacman -Syu"
 alias nvi="neovide && exit"
-alias fm="ranger"
+alias fm="yazi"
 alias lg="/usr/bin/lazygit"
 alias aircon="bluetoothctl connect 25:A0:0B:9F:C0:13"
 alias aircond="bluetoothctl disconnect 25:A0:0B:9F:C0:13"
 alias checkint="ping archlinux.org -c3"
-alias nv='NVIM_APPNAME="nvmy" nvim'
+alias nv='NVIM_APPNAME="rrr" nvim'
 alias ff='fastfetch'
 # ===========eza needed=============
 alias ls='eza' # preferred listing
@@ -133,6 +133,7 @@ alias l.="eza -a | grep -e '^\.'"                                     # show onl
 #  binding ~/.local/bin/sessionizer-tmux to <C-p>
 bindkey -s ^p "sessionizer-tmux\n"
 bindkey -s ^n "attacher\n"
+bindkey -s ^g "gsoc\n"
 
 
 alias kussh="ssh kuhpc"
@@ -142,6 +143,7 @@ alias mapper='setxkbmap -option caps:escape_shifted_capslock && xset r rate 300 
 alias monup='ddcutil setvcp 10 + 5 --bus 0'
 alias mondown='ddcutil setvcp 10 - 5 --bus 0'
 alias rm='bash /home/ceaser/gitbuilds/shell-safe-rm/bin/rm.sh'
+alias ignoreit="curl -fsSL https://raw.githubusercontent.com/razzat008/ignoreit/refs/heads/master/useit.sh | sh -s -- "
 alias nvidia-firefox="
 __NV_PRIME_RENDER_OFFLOAD=1 \
 __GLX_VENDOR_LIBRARY_NAME=nvidia \
@@ -172,3 +174,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export LD_LIBRARY_PATH=$HOME/.local/lib64:$LD_LIBRARY_PATH
+export GI_TYPELIB_PATH=$HOME/.local/lib64/girepository-1.0:$GI_TYPELIB_PATH
+export PKG_CONFIG_PATH=$HOME/.local/lib64/pkgconfig:$PKG_CONFIG_PATH
