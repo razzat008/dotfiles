@@ -115,7 +115,7 @@ alias n="nvim"
 alias v="vim"
 alias pacup="sudo pacman -Syu"
 alias nvi="neovide && exit"
-alias fm="yazi"
+alias fm="ranger"
 alias lg="/usr/bin/lazygit"
 alias aircon="bluetoothctl connect 25:A0:0B:9F:C0:13"
 alias aircond="bluetoothctl disconnect 25:A0:0B:9F:C0:13"
@@ -149,6 +149,18 @@ __NV_PRIME_RENDER_OFFLOAD=1 \
 __GLX_VENDOR_LIBRARY_NAME=nvidia \
 firefox
 "
+alias gitlabinit='git init &&
+git config --local user.name "rajatdahal" &&
+git config --local user.email "14545910-razzat008@users.noreply.gitlab.com"'
+
+# function fm() {
+# 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+# 	command yazi "$@" --cwd-file="$tmp"
+# 	IFS= read -r -d '' cwd < "$tmp"
+# 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+# 	rm -f -- "$tmp"
+# }
+
 # ===== zoxide needed ======
 eval "$(zoxide init zsh --cmd cd)"
 
@@ -177,3 +189,14 @@ esac
 export LD_LIBRARY_PATH=$HOME/.local/lib64:$LD_LIBRARY_PATH
 export GI_TYPELIB_PATH=$HOME/.local/lib64/girepository-1.0:$GI_TYPELIB_PATH
 export PKG_CONFIG_PATH=$HOME/.local/lib64/pkgconfig:$PKG_CONFIG_PATH
+
+# export ANDROID_HOME=$HOME/.Android/Sdk
+# export ANDROID_SDK_ROOT=$ANDROID_HOME
+# export PATH=$PATH:$HOME/.Android/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+
+export PATH="/home/ceaser/.rustup/toolchains/esp/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin:$PATH"
+export LIBCLANG_PATH="/home/ceaser/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-20.1.1_20250829/esp-clang/lib"
+
+# ruby on rails path
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:$GEM_HOME/bin"
