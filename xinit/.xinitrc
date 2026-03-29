@@ -38,12 +38,12 @@ exec slstatus &
 
 
 # run flameshot daemon
-if [[ "$(pidof flameshot)" ]]; then
-  echo " flameshot is running"
-else
-  echo "starting flameshot"
-  exec flameshot &
-fi
+# if [[ "$(pidof flameshot)" ]]; then
+#   echo " flameshot is running"
+# else
+#   echo "starting flameshot"
+#   exec flameshot &
+# fi
 
 #xfce4-panel
 # xfce4-panel --disable-wm-check
