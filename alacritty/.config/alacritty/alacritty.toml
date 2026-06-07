@@ -30,7 +30,7 @@ style = "Regular"
 # window configurations
 [window]
 decorations = "Full"
-opacity = 0.7
+opacity = 1.0
 blur = false
 dynamic_padding = true
 

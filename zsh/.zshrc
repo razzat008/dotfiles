@@ -120,12 +120,13 @@ alias lg="/usr/bin/lazygit"
 alias aircon="bluetoothctl connect 25:A0:0B:9F:C0:13"
 alias aircond="bluetoothctl disconnect 25:A0:0B:9F:C0:13"
 alias checkint="ping archlinux.org -c3"
-alias nv='NVIM_APPNAME="rrr" nvim'
+alias nv='NVIM_APPNAME="nvmy" nvim'
+
 alias ff='fastfetch'
 # ===========eza needed=============
 alias ls='eza' # preferred listing
 alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias ll='eza -l --color=always --group-directories-first --icons '  # long format
 alias lla='eza -la --color=always --group-directories-first --icons'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
@@ -149,9 +150,13 @@ __NV_PRIME_RENDER_OFFLOAD=1 \
 __GLX_VENDOR_LIBRARY_NAME=nvidia \
 firefox
 "
+
+alias tux="tuxedo ~/.personal/todo.txt"
 alias gitlabinit='git init &&
 git config --local user.name "rajatdahal" &&
 git config --local user.email "14545910-razzat008@users.noreply.gitlab.com"'
+
+# alias zed="DRI_PRIME=1 zed"
 
 # function fm() {
 # 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -162,6 +167,7 @@ git config --local user.email "14545910-razzat008@users.noreply.gitlab.com"'
 # }
 
 # ===== zoxide needed ======
+eval "$(zoxide init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
 # Generated for envman. Do not edit.
@@ -200,3 +206,7 @@ export LIBCLANG_PATH="/home/ceaser/.rustup/toolchains/esp/xtensa-esp32-elf-clang
 # ruby on rails path
 export GEM_HOME="$(gem env user_gemhome)"
 export PATH="$PATH:$GEM_HOME/bin"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/ceaser/.local/bin:$PATH"

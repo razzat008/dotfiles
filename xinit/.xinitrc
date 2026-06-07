@@ -110,4 +110,8 @@ fi
 #dynamic window manager-by suckless
 #to update dwm without closing the running apps
 #
-while type dwm >/dev/null; do dwm && continue || break; done
+while true; do
+    dwm
+    echo "dwm exited, restarting..." 
+    sleep 1
+done   
